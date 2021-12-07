@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title></title>
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<style >
+ body{
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('https://cdn.pixabay.com/photo/2014/12/08/11/49/couple-560783_960_720.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+ }
+ header{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+ .btn{
+   background-color:#FE6700;
+   color:#fff;
+ }
+</style>
+</head>
+<body>
+
+<header >
+ 
+<div class="card w-50 m-auto text-center ">
+  <div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
+  <div class="card-body">
+   <form class="form-inline w-75 m-auto">
+    <div class="form-group">
+     <input type="text" name="" class="form-control text-center" placeholder="Your Name" id="name" >
+    </div>
+    <div class="pl-4 pr-4">
+     <span> + </span>
+    </div>
+    <div class="form-group">
+     <input type="text" name="" class="form-control text-center" placeholder=" Love Name" id="lname">
+    </div>
+   </form> <br>
+    <div class="w-70 m-auto">
+     <button  class="btn  w-50" onclick="checkloveper()"> Submit </button>
+    </div>
+    <br>
+    <div>
+     <input type="text" name="" placeholder="LOVE PERCENTAGE" class="form-control text-center w-25 m-auto" id="lovevalue">
+     <h2 id="plus"> </h2>
+    </div>
+  </div> 
+  <div class="card-footer ">
+    Keep loving, until your last breath...
+    </div>
+</div>
+
+</header>
+
+<script>
+ function checkloveper(){
+
+ let name= document.getElementById('name').value;
+ let lname=document.getElementById('lname').value;
+ if(name==""){
+  alert("blank box")
+ }
+ else if (name.length<=2){
+  alert('Please write minimum 3 letter')
+ }
+ else if (!isNaN){
+   alert ('plz write character')
+ }
+
+
+ if(lname==""){
+  alert("blank box")
+ }
+ else if (lname.length<=2){
+  alert('Please write minimum 3 letter')
+ }
+ else if (!isNaN){
+   alert ('plz write character')
+ }
+ else{
+  let  randomValue=Math.random() * 100
+  randomValue=Math.floor(randomValue);
+  const loveValue=document.getElementById('lovevalue').value=randomValue + '%';
+
+  let plus=document.getElementById('plus').innerHTML=name +lname;
+ }
+ }
+
+
+
+
+
+
+
+
+//   var name = document.getElementById('name').value;
+//   var lname = document.getElementById('lname').value;
+
+//   if(name == ""){
+//    alert('Please enter your name');
+//   }else if (name.length <=2 ) {
+//    alert('Min lenght is 3')
+//   }else if(!isNaN(name)){
+//    alert('Numbers are not allowed');
+//   }
+
+//   else if(lname == ""){
+//    alert('Please enter your love name');
+//   }else if (lname.length <=2 ) {
+//    alert('Min lenght is 3')
+//   }else if(!isNaN(lname)){
+//    alert('Numbers are not allowed');
+//   }
+//   else{
+//   var lovdata = Math.random() * 100;
+//   lovdata = Math.floor(lovdata);
+//   document.getElementById('lovevalue').value = lovdata + "%"; 
+//   }
+  
+//  }
+</script>
+</body>
+
+</html>
